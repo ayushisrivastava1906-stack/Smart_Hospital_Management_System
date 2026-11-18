@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital Simulator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>SH<span>S</span></h2>
+            <p>Smart Hospital</p>
+        </div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#add-request">Add Request</a>
+            <a href="#queues">Request Queues</a>
+            <a href="#requests">All Requests</a>
+            <a href="#resources">Resources</a>
+            <a href="#history">History</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>Hospital Management System</p>
+            <small>DSA Based Project</small>
+        </div>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="topbar">
+            <div>
+                <h1>Smart Hospital Simulator</h1>
+                <p>Hospital Resource and Request Management</p>
+            </div>
+
+            <div class="admin">
+                <span>Admin Panel</span>
+            </div>
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section">
+
+            <div class="section-heading">
+                <h2>Dashboard Overview</h2>
+                <p>Monitor hospital activities and resources</p>
+            </div>
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <h3>Total Requests</h3>
+                    <h1>24</h1>
+                    <p>All registered requests</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Pending Requests</h3>
+                    <h1>08</h1>
+                    <p>Waiting for processing</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>In Progress</h3>
+                    <h1>10</h1>
+                    <p>Currently being processed</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <h1>06</h1>
+                    <p>Successfully completed</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ADD REQUEST -->
+        <section id="add-request" class="section">
+
+            <div class="section-heading">
+                <h2>Add New Patient Request</h2>
+                <p>Register a new hospital service request</p>
+            </div>
+
+            <div class="form-container">
+
+                <form action="/add-request" method="POST">
+
+                    <div class="form-group">
+                        <label for="patient">Patient Name</label>
+                        <input
+                            type="text"
+                            id="patient"
+                            name="patient"
+                            placeholder="Enter patient name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+
+                        <select id="service" name="service" required>
+                            <option value="">Choose service</option>
+                            <option value="1">General Consultation</option>
+                            <option value="2">Bed Allocation</option>
+                            <option value="3">X-Ray</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Request Priority</label>
+
+                        <select id="category" name="category" required>
+                            <option value="">Choose priority</option>
+                            <option value="1">Emergency</option>
+                            <option value="2">Urgent</option>
+                            <option value="3">Routine</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <input type="text" value="Pending" readonly>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Submit Request
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- REQUEST QUEUES -->
+        <section id="queues" class="section">
+
+            <div class="section-heading">
+                <h2>Priority Request Queues</h2>
+                <p>Requests are processed according to priority</p>
+            </div>
+
+            <div class="queue-container">
+
+                <div class="queue-card emergency">
+                    <h3>Emergency Queue</h3>
+                    <p>Highest Priority</p>
+                    <div class="queue-list">
+                        <p>Waiting for live requests</p>
+                    </div>
+                </div>
+
+                <div class="queue-card urgent">
+                    <h3>Urgent Queue</h3>
+                    <p>Medium Priority</p>
+                    <div class="queue-list">
+                        <p>Waiting for live requests</p>
+                    </div>
+                </div>
+
+                <div class="queue-card routine">
+                    <h3>Routine Queue</h3>
+                    <p>Normal Priority</p>
+                    <div class="queue-list">
+                        <p>Waiting for live requests</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ALL REQUESTS -->
+        <section id="requests" class="section">
+
+            <div class="section-heading">
+                <h2>All Patient Requests</h2>
+                <p>Overview of registered patient requests</p>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Patient Name</th>
+                            <th>Service</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>R101</td>
+                            <td>Rahul</td>
+                            <td>Consultation</td>
+                            <td>Emergency</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>R102</td>
+                            <td>Aman</td>
+                            <td>Bed Allocation</td>
+                            <td>Urgent</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>R103</td>
+                            <td>Priya</td>
+                            <td>X-Ray</td>
+                            <td>Routine</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+
+        <!-- RESOURCES -->
+        <section id="resources" class="section">
+
+            <div class="section-heading">
+                <h2>Hospital Resource Management</h2>
+                <p>Current resource availability</p>
+            </div>
+
+            <div class="resource-container">
+
+                <div class="resource-card">
+                    <h3>Doctors</h3>
+                    <h1>3 / 5</h1>
+                    <p>Available / Total</p>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Hospital Beds</h3>
+                    <h1>6 / 10</h1>
+                    <p>Available / Total</p>
+                </div>
+
+                <div class="resource-card">
+                    <h3>X-Ray Machines</h3>
+                    <h1>1 / 2</h1>
+                    <p>Available / Total</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- HISTORY -->
+        <section id="history" class="section">
+
+            <div class="section-heading">
+                <h2>Request History</h2>
+                <p>Previously processed hospital requests</p>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Patient Name</th>
+                            <th>Service</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>R103</td>
+                            <td>Priya</td>
+                            <td>X-Ray</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Smart Hospital Simulator | C++ and Data Structures Project</p>
+            <p>Developed by Team 17</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

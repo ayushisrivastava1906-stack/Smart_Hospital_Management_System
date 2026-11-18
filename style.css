@@ -1,0 +1,439 @@
+
+/* =================================
+   SMART HOSPITAL SIMULATOR
+   MAIN CSS
+================================= */
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fc;
+    color: #26344a;
+}
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #14243d;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.logo {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.logo h2 {
+    font-size: 36px;
+    letter-spacing: 3px;
+}
+
+.logo h2 span {
+    color: #38bdf8;
+}
+
+.logo p {
+    color: #aab9ce;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: 9px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: #263d5e;
+    color: white;
+    padding-left: 22px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    text-align: center;
+    color: #aab9ce;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.main-content {
+    margin-left: 250px;
+    padding: 30px 38px;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 23px 28px;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    margin-bottom: 35px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    color: #14243d;
+}
+
+.topbar p {
+    color: #8290a5;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+.admin {
+    background: #e8f4ff;
+    color: #0876c9;
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* =================================
+   SECTIONS
+================================= */
+
+.section {
+    margin-bottom: 45px;
+    scroll-margin-top: 25px;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    color: #14243d;
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #8290a5;
+    font-size: 14px;
+}
+
+/* =================================
+   DASHBOARD CARDS
+================================= */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px 22px;
+    border-radius: 13px;
+    border-left: 5px solid #2698e8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: #75849a;
+    font-weight: 600;
+}
+
+.stat-card h1 {
+    font-size: 34px;
+    color: #14243d;
+    margin: 14px 0;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #9aa7b8;
+}
+
+/* =================================
+   ADD REQUEST FORM
+================================= */
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 750px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 21px;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #34445c;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dce4ee;
+    border-radius: 8px;
+    background: #fbfdff;
+    outline: none;
+    font-size: 14px;
+    color: #34445c;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2698e8;
+    box-shadow: 0 0 0 3px rgba(38,152,232,0.10);
+}
+
+.submit-btn {
+    background: #1687d4;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0867ae;
+}
+
+/* =================================
+   REQUEST QUEUES
+================================= */
+
+.queue-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.queue-card {
+    background: white;
+    padding: 25px;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border-top: 5px solid #2698e8;
+}
+
+.queue-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.queue-card p {
+    color: #8290a5;
+    font-size: 13px;
+}
+
+.emergency {
+    border-top-color: #ef4444;
+}
+
+.urgent {
+    border-top-color: #f59e0b;
+}
+
+.routine {
+    border-top-color: #22a06b;
+}
+
+.queue-list {
+    margin-top: 22px;
+    padding: 15px;
+    background: #f6f9fd;
+    border-radius: 8px;
+}
+
+/* =================================
+   TABLES
+================================= */
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 13px;
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #edf4fb;
+}
+
+th {
+    color: #34445c;
+    font-size: 13px;
+    padding: 16px;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #edf1f6;
+    color: #64748b;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8fbff;
+}
+
+/* =================================
+   RESOURCE CARDS
+================================= */
+
+.resource-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    background: white;
+    padding: 28px;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    color: #75849a;
+    font-size: 16px;
+}
+
+.resource-card h1 {
+    color: #1687d4;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.resource-card p {
+    color: #9aa7b8;
+    font-size: 13px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #8290a5;
+    font-size: 13px;
+    border-top: 1px solid #e1e8f0;
+    line-height: 1.8;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 1100px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .queue-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .stats-container,
+    .resource-container {
+        grid-template-columns: 1fr;
+    }
+}
